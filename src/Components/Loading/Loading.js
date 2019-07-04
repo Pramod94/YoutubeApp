@@ -1,12 +1,12 @@
 import React from 'react';
+import './Spin.css';
 
 function Loading(props){
     return(
         <div>
             {props.isLoading && 
-            <div>
-                Loading...
-            </div>
+            // <div className="lds-hourglass"></div>
+            <div className="loader"></div>
             }
         </div>
     )

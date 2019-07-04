@@ -1,18 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import './SearchStyle.css';
 
 
-function Search(props){
+function Search(props) {
     return (
-        <div>
-            <div>
-                <input type="text"
+        <div className="search">
+            <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="Search here..."
                     value={props.search}
-                    onChange={props.handleInput}
-                />
-            </div>
-            <div>
-                <button onClick={props.result}>Search</button>
+                    onChange={props.handleInput} />
+
+                <div className="input-group-append">
+                    <button className="btn btn-outline-primary" type="button"
+                        onClick={props.result}>Search</button>
+                </div>
             </div>
         </div>
     )

@@ -4,6 +4,9 @@ import Search from './Components/Search/Search';
 import MainVideo from './Components/MainVideo/MainVideo';
 import VideoList from './Components/VideoList/VideoList';
 import Variables from './variables';
+import './Heading.css';
+import './Components/Images/youtube.png';
+import './Components/Loading/Spin.css';
 import './Components/VideoList/VideoList.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -39,7 +42,7 @@ class App extends Component {
     console.log("Fetching...");
     this.setState(
       {
-        result : [],
+        result: [],
         isLoading: true
       }
     )
@@ -47,10 +50,10 @@ class App extends Component {
       .then(res => res.json())
       .then(response => {
         const output = response.items.map(res => {
-          if(res.id.videoId !== undefined){
-            return "https://www.youtube.com/embed/" + res.id.videoId;
-          }
-         
+          // if(res.id.videoId !== undefined){
+          return "https://www.youtube.com/embed/" + res.id.videoId;
+          // }
+
         })
         this.setState(
           {
@@ -66,14 +69,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <Loading isLoading={this.state.isLoading}/>
-
+        <h3 className="heading">Youtube Search</h3>
         <Search
           search={this.state.search}
           handleInput={this.handleInput}
           result={this.handleResult}
         />
+
+        <Loading isLoading={this.state.isLoading} />
 
         <div style={{ display: 'block' }}>
 
