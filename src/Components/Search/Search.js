@@ -1,22 +1,21 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
-class Search extends React.Component {
 
-    render() {
-        return (
+function Search(props){
+    return (
+        <div>
             <div>
-                <div>
-                    <input type="text"
-                        value={this.props.search}
-                        onChange={this.props.handleInput}
-                    />
-                </div>
-                <div>
-                    <button onClick={this.props.result}>Search</button>
-                </div>
+                <input type="text"
+                    value={props.search}
+                    onChange={props.handleInput}
+                />
             </div>
-        )
-    }
+            <div>
+                <button onClick={props.result}>Search</button>
+            </div>
+        </div>
+    )
 }
 
 export default Search;

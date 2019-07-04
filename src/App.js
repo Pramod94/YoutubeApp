@@ -6,6 +6,7 @@ import VideoList from './Components/VideoList/VideoList';
 import Variables from './variables';
 import './Components/VideoList/VideoList.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   constructor(props) {
