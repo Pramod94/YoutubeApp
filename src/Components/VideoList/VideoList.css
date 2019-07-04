@@ -1,6 +1,8 @@
-.list{
-    float: right;
+.list {
+    /* float: right; */
+    margin-left: 2%;
+    margin-right: 2%;
     width: 300px;
-    height: 500px;
+    height: 400px;
     overflow: auto;
 }

@@ -4,6 +4,7 @@ import Search from './Components/Search/Search';
 import MainVideo from './Components/MainVideo/MainVideo';
 import VideoList from './Components/VideoList/VideoList';
 import Variables from './variables';
+import './GridSystem.css';
 import './Heading.css';
 import './Components/Images/youtube.png';
 import './Components/Loading/Spin.css';
@@ -78,9 +79,11 @@ class App extends Component {
 
         <Loading isLoading={this.state.isLoading} />
 
-        <div style={{ display: 'block' }}>
+        
 
-          <MainVideo main={this.state.mainUrl} />
+        <div className="gridSystem">
+
+        <MainVideo main={this.state.mainUrl} />
 
           <div className="list">
             <VideoList list={this.state.result} changeUrl={this.handleMainUrl} />
