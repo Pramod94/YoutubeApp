@@ -6,7 +6,7 @@ import VideoList from './Components/VideoList/VideoList';
 import Variables from './variables';
 import './GridSystem.css';
 import './Heading.css';
-import './Components/Images/youtube.png';
+import image from './Components/Images/youtube.png';
 import './Components/Loading/Spin.css';
 import './Components/VideoList/VideoList.css';
 import './App.css';
@@ -70,20 +70,32 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h3 className="heading">Youtube Search</h3>
-        <Search
+       
+        
+        <div className="container">
+  <div className="row align-items-center">
+    <div className="col-3 col-md-2">
+    <img src={image} width="120px" height="60px" alt="img" />
+    </div>
+    <div className="col-12 col-md-8">
+    <Search
           search={this.state.search}
           handleInput={this.handleInput}
           result={this.handleResult}
         />
-
-        <Loading isLoading={this.state.isLoading} />
+    </div>
+   
+  </div>
+  
+</div>
 
         
 
+        <Loading isLoading={this.state.isLoading} />
+
         <div className="gridSystem">
 
-        <MainVideo main={this.state.mainUrl} />
+          <MainVideo main={this.state.mainUrl} />
 
           <div className="list">
             <VideoList list={this.state.result} changeUrl={this.handleMainUrl} />

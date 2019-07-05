@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import play from '/home/pramod/React/youtube_app/src/Components/Images/youtube-play.jpg'
 import './SearchStyle.css';
 
 
@@ -12,8 +13,11 @@ function Search(props) {
                     onChange={props.handleInput} />
 
                 <div className="input-group-append">
-                    <button className="btn btn-outline-primary" type="button"
-                        onClick={props.result}>Search</button>
+                    <button className="btn btn-outline-success" type="button"
+                        onClick={props.result}>
+                        {/* <img src={play} alt="search" width="40px" height="24px"/> */}
+                        Search
+                        </button>
                 </div>
             </div>
         </div>
